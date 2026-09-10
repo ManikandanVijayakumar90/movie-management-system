@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.title {
+  text-align: center;
+  margin: 40px 0 50px;
+  font-weight: 700;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.movie-card .movie-form {
+  margin: 10px 0;
+  padding: 15px;
+  width: auto;
+  box-shadow: none;
+}
+.movie-card .movie-form input {
+  margin: 6px 0;
+  padding: 10px;
+}
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.movie-card button {
+  margin-top: 10px;
+}
+.movie-card .edit-btn,
+.movie-card .delete-btn {
+  margin-right: 5px;
+}
+
+.movie-info {
+  padding: 16px;
+}
+
+.movie-info h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.movie-info p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.add-btn {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.movie-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.movie-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.movie-form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.movie-form p {
+  color: #dc3545;
+  font-size: 15px;
+  margin: 4px 0 10px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.input-error {
+  border: 1px solid #dc3545 !important;
+}
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.error-message {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.loading-message {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
