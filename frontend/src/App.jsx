@@ -48,12 +48,18 @@ function App() {
     }
     console.log("Submit Clicked");
     axios
-      .post("http://localhost:5000/api/movies", formData)
+      .post(
+        "https://movie-management-system-eptg.onrender.com/api/movies",
+        formData,
+      )
       .then((response) => {
         console.log(response.data);
         setShowForm(false);
         axios
-          .get("http://localhost:5000/api/movies", formData)
+          .get(
+            "https://movie-management-system-eptg.onrender.com/api/movies",
+            formData,
+          )
           .then((response) => {
             setMovies(response.data);
           });
@@ -68,11 +74,16 @@ function App() {
     // e.preventDefault();
     console.log("Delete Button Clicked");
     axios
-      .delete(`http://localhost:5000/api/movies/${id}`)
+      .delete(
+        `https://movie-management-system-eptg.onrender.com/api/movies/${id}`,
+      )
       .then((response) => {
         console.log(response.data);
         axios
-          .get("http://localhost:5000/api/movies", formData)
+          .get(
+            "https://movie-management-system-eptg.onrender.com/api/movies",
+            formData,
+          )
           .then((response) => {
             setMovies(response.data);
           });
@@ -106,13 +117,18 @@ function App() {
       return;
     }
     axios
-      .put(`http://localhost:5000/api/movies/${id}`, editMovie)
+      .put(
+        `https://movie-management-system-eptg.onrender.com/api/movies/${id}`,
+        editMovie,
+      )
       .then((response) => {
         console.log(response.data);
-        axios.get("http://localhost:5000/api/movies/").then((response) => {
-          setMovies(response.data);
-          setEditMovie(null);
-        });
+        axios
+          .get("https://movie-management-system-eptg.onrender.com/api/movies")
+          .then((response) => {
+            setMovies(response.data);
+            setEditMovie(null);
+          });
       })
       .catch((error) => {
         console.log(error);
@@ -126,7 +142,7 @@ function App() {
     setError("");
 
     axios
-      .get("http://localhost:5000/api/movies")
+      .get("https://movie-management-system-eptg.onrender.com/api/movies")
       .then((response) => {
         setMovies(response.data);
         console.log(response.data);
